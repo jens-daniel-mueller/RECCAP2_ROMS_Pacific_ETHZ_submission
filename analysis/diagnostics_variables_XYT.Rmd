@@ -21,7 +21,7 @@ editor_options:
 ```{r set_paths, include=FALSE}
 
 path_cmorized_annual <-
-  "/net/kryo/work/loher/ROMS/RECCAP2/Atlantic_global_proto/submit/"
+  "/net/kryo/work/loher/ROMS/RECCAP2/Pactcs30_global_proto/submit/"
 
 ```
 
@@ -42,7 +42,7 @@ overview <-
 variables <-
   overview %>%
   filter(shape == "XYT") %>%
-  drop_na() %>% 
+  # drop_na() %>% 
   distinct(variable_id) %>%
   pull()
 
@@ -71,7 +71,7 @@ for (i_experiment_ID in experiment_IDs) {
     
     # read list of all files
     file <- paste(i_variable,
-                  "_ROMS-Atlantic-ETHZ_",
+                  "_ROMS-Pacific-ETHZ_",
                   i_experiment_ID,
                   "_1_gr_1980-2018_v20210618.nc",
                   sep = "")

@@ -64,7 +64,7 @@ The list of files and sizes of the ETHZ CESM model output refers to the content 
 
 # set path to output
 path_ROMS <-
-  "/net/kryo/work/loher/ROMS/RECCAP2/Atlantic_global_proto/submit"
+  "/net/kryo/work/loher/ROMS/RECCAP2/Pactcs30_global_proto/submit"
 path_ROMS
 
 # create list of CESM output files and sizes
@@ -100,7 +100,8 @@ ROMS_files <- ROMS_files %>%
 
 # join file list and tab 3
 overview <- full_join(table_3, ROMS_files) %>%
-  arrange(variable_id)
+  arrange(variable_id) %>% 
+  filter(!is.na(file_size_MB))
 
 rm(ROMS_files, table_3)
 
