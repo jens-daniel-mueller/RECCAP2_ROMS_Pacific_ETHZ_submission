@@ -12,7 +12,7 @@ editor_options:
 knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 ```
 
-On this website we present some initial analysis of the CESM-ETHZ model output submitted to RECCAP2-ocean.
+On this website we present some initial analysis of the ROMS-ETHZ model output submitted to RECCAP2-ocean.
 
 This initial analysis covers results from 4 model runs (A-D).
 
