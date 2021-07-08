@@ -23,7 +23,7 @@ editor_options:
 ```{r set_paths, include=FALSE}
 
 path_cmorized_annual <-
-  "/net/kryo/work/loher/ROMS/RECCAP2/Pactcs30_global_proto/submit_20210622/"
+  "/net/kryo/work/loher/ROMS/RECCAP2/Pactcs30_global_proto/submit_20210707/"
 
 ```
 
@@ -66,7 +66,7 @@ i_variable
 
 # read list of all files
 file <- paste(i_variable,
-              "_ROMS-Pacific-ETHZ_1_gr_1980-2018_v20210622.nc",
+              "_ROMS-Pacific-ETHZ_1_gr_1980-2018_v20210707.nc",
               sep = "")
 print(file)
 
@@ -84,7 +84,7 @@ variable_data_tibble <- variable_data %>%
 rm(variable_data)
 
 variable_data_tibble %>%
-  ggplot(aes(time_ann, Atm_CO2)) +
+  ggplot(aes(time_mon, Atm_CO2)) +
   geom_path() +
   geom_point()
 
@@ -102,7 +102,7 @@ for (i_variable in variables) {
   
   # read list of all files
   file <- paste(i_variable,
-                "_ROMS-Pacific-ETHZ_1_gr_v20210622.nc",
+                "_ROMS-Pacific-ETHZ_1_gr_v20210707.nc",
                 sep = "")
   print(file)
   
@@ -149,7 +149,7 @@ for (i_variable in variables) {
   
   # read list of all files
   file <- paste(i_variable,
-                "_ROMS-Pacific-ETHZ_1_gr_v20210622.nc",
+                "_ROMS-Pacific-ETHZ_1_gr_v20210707.nc",
                 sep = "")
   print(file)
   
@@ -190,7 +190,7 @@ for (i_variable in variables) {
   
   # read list of all files
   file <- paste(i_variable,
-                "_ROMS-Pacific-ETHZ_1_gr_v20210622.nc",
+                "_ROMS-Pacific-ETHZ_1_gr_v20210707.nc",
                 sep = "")
   print(file)
   
