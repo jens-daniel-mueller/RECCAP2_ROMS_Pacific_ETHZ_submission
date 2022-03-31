@@ -22,7 +22,7 @@ editor_options:
 ```{r set_paths, include=FALSE}
 
 path_cmorized_annual <-
-  "/net/kryo/work/loher/ROMS/RECCAP2/Pactcs30_global_proto/submit_20210707/"
+  "/net/kryo/work/loher/ROMS/RECCAP2_Jan2022/Pacific_global_proto_runA/submit_20220325/"
 
 ```
 
