@@ -1,4 +1,4 @@
-# RECCAP2_CESM_ETHZ_submission
+# RECCAP2_ROMS_Pacific_ETHZ_submission
 
 A [workflowr][] project.
 
