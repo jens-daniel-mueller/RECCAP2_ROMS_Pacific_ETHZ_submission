@@ -67,7 +67,7 @@ Plots for all variables are shown one after the other for the model runs:
 for (i_experiment_ID in experiment_IDs) {
   for (i_variable in variables) {
     # i_experiment_ID <- experiment_IDs[1]
-    # i_variable <- variables[10]
+    # i_variable <- variables[4]
     
     # read list of all files
     file <- paste(i_variable,
@@ -123,7 +123,7 @@ for (i_experiment_ID in experiment_IDs) {
     
     variable_data_tibble_time_series <-
       variable_data_tibble %>%
-      group_by(time_mon) %>%
+      group_by(time) %>%
       summarise(
         "mean" := mean(!!sym(i_variable), na.rm = TRUE),
         "min"  := min(!!sym(i_variable), na.rm = TRUE),
@@ -136,7 +136,7 @@ for (i_experiment_ID in experiment_IDs) {
         ggplot() +
         geom_ribbon(
           aes(
-            x = time_mon,
+            x = time,
             ymin = min,
             ymax = max,
             fill = "min/max"
@@ -144,7 +144,7 @@ for (i_experiment_ID in experiment_IDs) {
           alpha = 0.3
         ) +
         geom_path(aes(
-          x = time_mon,
+          x = time,
           y = mean,
           col  = "mean"
         )) +

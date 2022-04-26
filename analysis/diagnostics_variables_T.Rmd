@@ -90,7 +90,7 @@ for (i_experiment_ID in experiment_IDs) {
     rm(variable_data)
     
     print(variable_data_tibble %>%
-            ggplot(aes(time_mon,
+            ggplot(aes(time,
                        fgco2_glob)) +
             geom_path() +
             labs(title = paste("experiment_ID:", i_experiment_ID)))
@@ -133,7 +133,7 @@ for (i_experiment_ID in experiment_IDs) {
   
   print(
     variable_data_tibble %>%
-      ggplot(aes(time_mon,
+      ggplot(aes(time,
                  fgco2_reg)) +
       geom_hline(yintercept = 0, col = "red") +
       geom_path() +
